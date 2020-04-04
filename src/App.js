@@ -7,27 +7,18 @@ function App() {
 
     return (
         <div className="App">
-            <RadioGroup>
+            <RadioGroup value={value} onChange={setValue} name="testradios" >
                 <RadioField
                     label="one"
-                    name="testradios"
                     value={1}
-                    onChange={setValue}
-                    checked={value === 1 ? true : false}
                 />
                 <RadioField
                     label="two"
-                    name="testradios"
                     value={2}
-                    onChange={setValue}
-                    checked={value === 2 ? true : false}
                 />
                 <RadioField
                     label="three"
-                    name="testradios"
                     value={3}
-                    onChange={setValue}
-                    checked={value === 3 ? true : false}
                 />
             </RadioGroup>
             <div>Current value: {value}</div>

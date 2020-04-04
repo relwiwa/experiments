@@ -1,9 +1,21 @@
 import React from "react";
 
+export const RadioGroupContext = React.createContext({
+    value: null,
+    name: null,
+    onChange: null
+});
+
 export const RadioGroup = ({
-    children
+    children,
+    name,
+    onChange,
+    value
 }) => {
+
     return (
-        <div>{children}</div>
+        <RadioGroupContext.Provider value={{ value, name, onChange }}>
+            <div>{children}</div>
+        </RadioGroupContext.Provider>
     )
 }

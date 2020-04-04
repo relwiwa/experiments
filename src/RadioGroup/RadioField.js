@@ -1,18 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { RadioGroupContext } from "./RadioGroup";
 
 export const RadioField = ({
-    checked,
     label,
-    name,
-    onChange,
     value
 }) => {
+    const { name, value: currentValue, onChange } = useContext(RadioGroupContext)
     return (
         <label>
             <input
                 type="radio"
                 name={name}
-                checked={checked}
+                checked={currentValue === value ? true : false}
                 value={value}
                 onChange={() => onChange(value)}
             />
