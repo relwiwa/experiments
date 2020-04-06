@@ -7,7 +7,7 @@ export const RadioGroupField = ({ legend, error, ...radioGroupProps }) => {
         <fieldset>
             <legend>{legend}</legend>
             <RadioGroup
-                invalid={error ? true : false}
+                invalid={error ? "true" : "false"}
                 {...radioGroupProps}
             />
             {error && <div className={styles.error}>{error}</div>}

@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import "./App.css";
 import { RadioField, RadioGroupField } from "./RadioGroup";
+import { FormExample } from "./FinalForm/FormExample";
 
 function App() {
     const [value, setValue] = useState(2);
 
     return (
         <div className="App">
+            <FormExample/>
+            <hr />
             <RadioGroupField
                 value={value}
                 onChange={setValue}
