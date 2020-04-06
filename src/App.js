@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import "./App.css";
-import { RadioField, RadioGroup } from "./RadioGroup";
+import { RadioField, RadioGroupField } from "./RadioGroup";
 
 function App() {
     const [value, setValue] = useState(2);
 
     return (
         <div className="App">
-            <RadioGroup value={value} onChange={setValue} name="testradios" >
+            <RadioGroupField
+                value={value}
+                onChange={setValue}
+                name="testradios"
+                legend="Test Radios"
+                error="An error occurred"
+            >
                 <RadioField
                     label="one"
                     value={1}
@@ -20,7 +26,7 @@ function App() {
                     label="three"
                     value={3}
                 />
-            </RadioGroup>
+            </RadioGroupField>
             <div>Current value: {value}</div>
         </div>
   );
